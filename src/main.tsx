@@ -9,7 +9,8 @@ import {
 import Layout from './components/Layout';
 import Errorpage from './pages/Errorpage';
 import Homepage from './pages/Homepage';
-import './index.scss';
+import 'normalize.css';
+import './index.module.scss';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
