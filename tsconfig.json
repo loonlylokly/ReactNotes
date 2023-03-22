@@ -20,11 +20,11 @@
     "baseUrl": "./src",
   },
   "include": [
-    // "./src/**/*",
     "styled.d.ts",
     "src",
     ".eslintrc.cjs",
-    "./src/test/setup.ts",
+    // "./src/test/setup.ts",
+    "vite.config.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
