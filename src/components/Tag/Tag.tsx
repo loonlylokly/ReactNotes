@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { ITag } from '../../types/ITag';
 import styles from './Tag.module.scss';
 
-interface TagProps {
+type TagProps = {
   tag: ITag;
-}
+};
 
 const Tag: FC<TagProps> = ({ tag }) => {
   return (
