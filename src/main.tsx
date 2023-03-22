@@ -9,7 +9,7 @@ import {
 import Layout from './components/Layout';
 import Errorpage from './pages/Errorpage';
 import Homepage from './pages/Homepage';
-import './index.css';
+import './index.scss';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
