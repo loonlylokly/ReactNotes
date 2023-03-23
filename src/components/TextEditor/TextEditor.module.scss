@@ -1,0 +1,22 @@
+.texteditor {
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.textNote {
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  column-gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0 3px;
+  background: #716b1a;
+  border-radius: 5px;
+}
