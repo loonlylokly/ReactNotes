@@ -7,7 +7,7 @@ import { INote } from '../types/INote';
 import HomeContext from '../context/HomeContext';
 
 function Homepage() {
-  const [notes, setNotes] = useState<INote[]>(JSON.parse(localStorage.notes));
+  const [notes, setNotes] = useState<INote[]>(JSON.parse(localStorage.getItem('notes') as string));
   const [selectedNote, setSelectedNote] = useState('');
 
   useEffect(() => {
