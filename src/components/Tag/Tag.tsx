@@ -9,8 +9,11 @@ type TagProps = {
 
 const Tag: FC<TagProps> = ({ tag }) => {
   return (
-    <div className={`${styles.note}`}>
-      <p>{tag.name}</p>
+    <div className={styles.tag}>
+      <p className={styles.text}>{tag.name}</p>
+      <button className={styles.delete} type="button">
+        X
+      </button>
     </div>
   );
 };

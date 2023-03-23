@@ -1,3 +1,26 @@
 .tag {
-  
+  // width: 1rem;
+  // height: 1rem;
+  background: #686868;
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+  border-radius: 3rem;
+  display: flex;
+  column-gap: 0.3rem;
+}
+
+.text {
+  margin: 0;
+}
+
+.delete {
+  background: #686868;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.8rem;
+  padding: 0;
+  border-radius: 3rem;
+  &:hover {
+    background-color: #7c7f84;
+  }
 }
