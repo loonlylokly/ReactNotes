@@ -14,6 +14,10 @@ type NoteProps = {
 };
 
 const Note: FC<NoteProps> = ({ note, onDeleteNote, selectedNote, setSelectedNote }) => {
+  const text = note.text
+    .replace(/&nbsp;/g, ' ')
+    .replace(/<br>/g, ' ')
+    .replace(/<[^>]*>/g, '');
   return (
     <div
       className={`${styles.note} ${(note.id === selectedNote && styles.selected) || ''}`}
@@ -26,13 +30,11 @@ const Note: FC<NoteProps> = ({ note, onDeleteNote, selectedNote, setSelectedNote
           X
         </button>
       </div>
-      <p className={styles.text}>
-        {note.text.length > 30 ? `${note.text.slice(0, 30)}...` : note.text}
-      </p>
+      <p className={styles.text}>{text.length > 30 ? `${text.slice(0, 30)}...` : text}</p>
       <List
         classNameList={styles.list}
         items={note.tags}
-        renderItem={(tag: ITag) => <Tag key={tag.id} tag={tag} />}
+        renderItem={(tag: ITag) => <Tag key={tag.id} tag={tag} note={note} />}
       />
     </div>
   );

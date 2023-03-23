@@ -1,18 +1,14 @@
-import { Dispatch, SetStateAction } from 'react';
+import { useContext } from 'react';
 import List from '../List';
 import Note from '../Note/Note';
 import { INote } from '../../types/INote';
 import styles from './Sidebar.module.scss';
+import HomeContext from '../../context/HomeContext';
 
-type NoteProps = {
-  notes: INote[];
-  onAddNote: () => void;
-  onDeleteNote: (idDelete: string) => void;
-  selectedNote: string;
-  setSelectedNote: Dispatch<SetStateAction<string>>;
-};
-
-function Sidebar({ notes, onAddNote, onDeleteNote, selectedNote, setSelectedNote }: NoteProps) {
+function Sidebar() {
+  const context = useContext(HomeContext);
+  if (!context) return null;
+  const { notes, onAddNote, onDeleteNote, selectedNote, setSelectedNote } = context;
   return (
     <aside className={styles.sidebar}>
       <button className={styles.add} type="button" onClick={onAddNote}>
