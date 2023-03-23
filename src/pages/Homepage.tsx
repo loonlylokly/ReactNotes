@@ -7,6 +7,7 @@ import { INote } from '../types/INote';
 import HomeContext from '../context/HomeContext';
 
 function Homepage() {
+  console.log('render Homepage');
   const [notes, setNotes] = useState<INote[]>(JSON.parse(localStorage.notes) || []);
   const [selectedNote, setSelectedNote] = useState('');
 
@@ -67,6 +68,7 @@ function Homepage() {
   const globalContextValue = useMemo(
     () => ({
       notes,
+      setNotes,
       onAddNote,
       onDeleteNote,
       selectedNote,
@@ -77,6 +79,7 @@ function Homepage() {
     }),
     [
       notes,
+      setNotes,
       onAddNote,
       onDeleteNote,
       selectedNote,

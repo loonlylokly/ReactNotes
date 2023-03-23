@@ -3,6 +3,7 @@ import { INote } from 'types/INote';
 
 type ContextProps = {
   notes: INote[];
+  setNotes: Dispatch<SetStateAction<INote[]>>;
   onAddNote: () => void;
   onDeleteNote: (idDelete: string) => void;
   selectedNote: string;

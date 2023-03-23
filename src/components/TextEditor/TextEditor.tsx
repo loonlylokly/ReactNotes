@@ -8,6 +8,7 @@ import styles from './TextEditor.module.scss';
 import HomeContext from '../../context/HomeContext';
 
 function TextEditor() {
+  console.log('render TextEditor');
   const [newTag, setNewTag] = useState(-1);
   const context = useContext(HomeContext);
   if (!context) return null;
