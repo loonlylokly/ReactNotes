@@ -29,8 +29,6 @@ function Sidebar() {
     }
   };
 
-  // setNotesFiltred([...notes]);
-
   return (
     <aside className={styles.sidebar}>
       <button className={styles.add} type="button" onClick={onAddNote}>
